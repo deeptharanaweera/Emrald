@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import './App.css';
-import Footer from './components/Footer';
 import Header from './components/Header';
-import Navibar from './components/Navibar';
 import Home from './pages/Home';
+import ItemView from './pages/ItemView';
 import Login from './pages/Login';
 
 
@@ -15,8 +14,9 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/emrald" element={<Home />} />
+        <Route path="/Emrald/" element={<Home />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/itemview' element={<ItemView/>}/>
       </Routes>
       
     </>

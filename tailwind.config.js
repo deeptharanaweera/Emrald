@@ -14,9 +14,11 @@ export default {
       'white':'#FFFFFF',
       'red': '#dc2626',
       'gold': '#F05A00',
+      'dark_gold': '#D55102',
       'blue': '#1d4ed8',
       'dark_blue': '#1e40af',
-      'green': '#10B981',
+      'green': '#00FF00',
+      'dark_green': '#00C000',
     },
     extend: {
       animation:{

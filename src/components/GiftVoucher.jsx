@@ -17,30 +17,30 @@ function GiftVoucher() {
                 <IoIosStarOutline className='text-white text-[30px]'/>
                 <hr className="w-[372px] h-1 bg-white border-0 rounded md:" />
             </div>
-            <div className='flex justify-center items-center gap-5 p-5'>
-                <div className='flex flex-col items-center bg-white w-[263px] h-[396px] rounded-3xl gap-5 transition duration-500 ease-in-out hover:scale-110 '>
-                    <img src={logo} alt="" className='w-40 h-20 mt-2' />
-                    <FaGift className='text-[110px] text-green'/>
-                    <p className='text-3xl font-bold font-serif'>Rs. 2000</p>
-                    <button className='bg-blue text-white p-4 rounded-xl hover:bg-dark_blue text-xl'>Buy Now</button>
+            <div className='flex justify-center items-center md:gap-5 gap-2 md:p-5'>
+                <div className='flex flex-col items-center bg-white md:w-[263px] w-[100px] md:h-[396px] h-[250px] rounded-3xl gap-5 transition duration-500 ease-in-out hover:scale-110 '>
+                    <img src={logo} alt="" className='md:w-40 w-10 md:h-20 h-8 mt-2' />
+                    <FaGift className='md:text-[110px] text-[50px] text-green'/>
+                    <p className='md:text-3xl text-md font-bold font-serif'>Rs. 2000</p>
+                    <button className='bg-blue text-white md:p-4 p-1 rounded-xl hover:bg-dark_blue md:text-xl text-sm'>Buy Now</button>
                 </div>
-                <div className='flex flex-col items-center bg-white w-[263px] h-[396px] rounded-3xl gap-5 transition duration-500 ease-in-out hover:scale-110 '>
-                    <img src={logo} alt="" className='w-40 h-20 mt-2' />
-                    <FaGift className='text-[110px] text-blue'/>
-                    <p className='text-3xl font-bold font-serif'>Rs. 5000</p>
-                    <button className='bg-blue text-white p-4 rounded-xl hover:bg-dark_blue text-xl'>Buy Now</button>
+                <div className='flex flex-col items-center bg-white md:w-[263px] w-[100px] md:h-[396px] h-[250px] rounded-3xl gap-5 transition duration-500 ease-in-out hover:scale-110 '>
+                    <img src={logo} alt="" className='md:w-40 w-10 md:h-20 h-8 mt-2' />
+                    <FaGift className='md:text-[110px] text-[50px] text-blue'/>
+                    <p className='md:text-3xl text-md font-bold font-serif'>Rs. 5000</p>
+                    <button className='bg-blue text-white md:p-4 p-1 rounded-xl hover:bg-dark_blue md:text-xl text-sm'>Buy Now</button>
                 </div>
-                <div className='flex flex-col items-center bg-white w-[263px] h-[396px] rounded-3xl gap-5 transition duration-500 ease-in-out hover:scale-110 '>
-                    <img src={logo} alt="" className='w-40 h-20 mt-2' />
-                    <FaGift className='text-[110px] text-red'/>
-                    <p className='text-3xl font-bold font-serif'>Rs. 10000</p>
-                    <button className='bg-blue text-white p-4 rounded-xl hover:bg-dark_blue text-xl'>Buy Now</button>
+                <div className='flex flex-col items-center bg-white md:w-[263px] w-[100px] md:h-[396px] h-[250px] rounded-3xl gap-5 transition duration-500 ease-in-out hover:scale-110 '>
+                    <img src={logo} alt="" className='md:w-40 w-10 md:h-20 h-8 mt-2' />
+                    <FaGift className='md:text-[110px] text-[50px] text-red'/>
+                    <p className='md:text-3xl text-md font-bold font-serif'>Rs. 10000</p>
+                    <button className='bg-blue text-white md:p-4 p-1 rounded-xl hover:bg-dark_blue md:text-xl text-sm'>Buy Now</button>
                 </div>
-                <div className='flex flex-col items-center bg-white w-[263px] h-[396px] rounded-3xl gap-5 transition duration-500 ease-in-out hover:scale-110 '>
-                    <img src={logo} alt="" className='w-40 h-20 mt-2' />
-                    <FaGift className='text-[110px] text-gold'/>
-                    <p className='text-3xl font-bold font-serif'>Rs. 20000</p>
-                    <button className='bg-blue text-white p-4 rounded-xl hover:bg-dark_blue text-xl'>Buy Now</button>
+                <div className='flex flex-col items-center bg-white md:w-[263px] w-[100px] md:h-[396px] h-[250px] rounded-3xl gap-5 transition duration-500 ease-in-out hover:scale-110 '>
+                    <img src={logo} alt="" className='md:w-40 w-10 md:h-20 h-8 mt-2' />
+                    <FaGift className='md:text-[110px] text-[50px] text-gold'/>
+                    <p className='md:text-3xl text-md font-bold font-serif'>Rs. 20000</p>
+                    <button className='bg-blue text-white md:p-4 p-1 rounded-xl hover:bg-dark_blue md:text-xl text-sm'>Buy Now</button>
                 </div>
             </div>
         </div>
