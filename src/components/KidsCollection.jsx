@@ -128,7 +128,7 @@ function KidsCollection() {
                         <div
                             key={index}
                             className='bg-gray md:w-[400px] w-[200px] h-auto md:pt-5 pt-2 md:pl-5 pl-2 md:pr-5 pr-2 pb-2'
-                            onClick={() => navigate('/itemviewkid', { state: { src, title, price, discount } })}
+                            onClick={() => navigate('/emrald/itemviewkid', { state: { src, title, price, discount } })}
                             style={{ cursor: 'pointer' }}
                         >
                             <div className='relative group bg-no-repeat bg-cover overflow-hidden'>

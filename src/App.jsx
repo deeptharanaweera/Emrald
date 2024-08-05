@@ -16,11 +16,11 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/Emrald/" element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/itemview' element={<ItemView/>}/>
-        <Route path='/itemviewmen' element={<ItemViewMen/>}/>
-        <Route path='/itemviewkid' element={<ItemViewKid/>}/>
+        <Route path="/emrald" element={<Home />} />
+        <Route path='/emrald/login' element={<Login />} />
+        <Route path='/emrald/itemview' element={<ItemView/>}/>
+        <Route path='/emrald/itemviewmen' element={<ItemViewMen/>}/>
+        <Route path='/emrald/itemviewkid' element={<ItemViewKid/>}/>
       </Routes>
       
     </>

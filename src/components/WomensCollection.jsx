@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
 import girl_crop1 from '../assets/girl_crop1.jpg';
 import girl_crop2 from '../assets/girl_crop2.jpg';
 import girl_crop3 from '../assets/girl_crop3.jpg';
@@ -20,7 +21,6 @@ import girl_tshirt4_2 from '../assets/girl_tshirt4_2.jpg';
 import girl_tshirt5 from '../assets/girl_tshirt5.jpg';
 import girl_tshirt5_1 from '../assets/girl_tshirt5_1.jpg';
 import girl_tshirt5_2 from '../assets/girl_tshirt5_2.jpg';
-import { useSwipeable } from 'react-swipeable';
 
 function WomensCollection() {
     const [activeButton, setActiveButton] = useState('T-Shirt');
@@ -131,7 +131,7 @@ function WomensCollection() {
                 {...swipeHandlers}>
                     {visibleItems.map(({ src, src1, src2, title, price, discount }, index) => (
                         <Link
-                            to={`/itemview?src=${encodeURIComponent(src)}&src1=${encodeURIComponent(src1)}&src2=${encodeURIComponent(src2)}&title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}&discount=${encodeURIComponent(discount)}`}
+                            to={`/emrald/itemview?src=${encodeURIComponent(src)}&src1=${encodeURIComponent(src1)}&src2=${encodeURIComponent(src2)}&title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}&discount=${encodeURIComponent(discount)}`}
                             key={index}
                             className='group bg-gray md:w-[400px] w-[200px] h-auto md:pt-5 pt-2 md:pl-5 pl-2 md:pr-5 pr-2 pb-2'
                         >

@@ -6,10 +6,15 @@ import { useSwipeable } from 'react-swipeable';
 import men_tshirt1 from '../assets/men_tshirt1.jpg';
 import men_tshirt1_1 from '../assets/men_tshirt1_1.jpg';
 import men_tshirt2 from '../assets/men_tshirt2.jpg';
+import men_tshirt2_1 from '../assets/men_tshirt2_1.jpg';
 import men_tshirt3 from '../assets/men_tshirt3.jpg';
+import men_tshirt3_1 from '../assets/men_tshirt3_1.jpg';
 import men_tshirt4 from '../assets/men_tshirt4.jpg';
+import men_tshirt4_1 from '../assets/men_tshirt4_1.jpg';
 import men_tshirt5 from '../assets/men_tshirt5.jpg';
+import men_tshirt5_1 from '../assets/men_tshirt5_1.jpg';
 import men_tshirt6 from '../assets/men_tshirt6.jpg';
+import men_tshirt6_1 from '../assets/men_tshirt6_1.jpg';
 import shirt1 from '../assets/shirt1.jpg';
 import shirt2 from '../assets/shirt2.jpg';
 import shirt3 from '../assets/shirt3.jpg';
@@ -25,11 +30,11 @@ function MensCollection() {
     const items = {
         'T-Shirt': [
             { src: men_tshirt1, src1: men_tshirt1_1, title: 'Lion Pride Polo - Egret', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
-            { src: men_tshirt2, title: 'Lion Pride Polo - Tuff Green', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
-            { src: men_tshirt3, title: 'Lion Pride Polo - Blue Depths', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
-            { src: men_tshirt4, title: 'Lion Pride Polo - Yellow-Aurora', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
-            { src: men_tshirt5, title: 'Lion Pride Polo - Ashley Blue', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
-            { src: men_tshirt6, title: 'Lion Pride Polo - Brown Port', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
+            { src: men_tshirt2, src1: men_tshirt2_1, title: 'Lion Pride Polo - Tuff Green', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
+            { src: men_tshirt3, src1: men_tshirt3_1, title: 'Lion Pride Polo - Blue Depths', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
+            { src: men_tshirt4, src1: men_tshirt4_1, title: 'Lion Pride Polo - Yellow-Aurora', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
+            { src: men_tshirt5, src1: men_tshirt5_1, title: 'Lion Pride Polo - Ashley Blue', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
+            { src: men_tshirt6, src1: men_tshirt6_1, title: 'Lion Pride Polo - Brown Port', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
         ],
         'Shirt': [
             { src: shirt1, title: 'Emerald Active Printed Leisure Fit-Blue ', price: 'Rs 3,795.00', discount: 'Rs 1,265.00 ' },
@@ -131,7 +136,7 @@ function MensCollection() {
                         <div
                             key={index}
                             className='group bg-gray md:w-[400px] w-[200px] h-auto md:pt-5 pt-2 md:pl-5 pl-2 md:pr-5 pr-2 pb-2'
-                            onClick={() => navigate('/itemviewmen', { state: { src, src1, title, price, discount } })}
+                            onClick={() => navigate('/emrald/itemviewmen', { state: { src, src1, title, price, discount } })}
                             style={{ cursor: 'pointer' }} // Add cursor pointer to indicate clickable items
                         >
                             <div className='relative group bg-no-repeat bg-cover overflow-hidden'>
