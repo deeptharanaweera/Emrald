@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import ItemView from './pages/ItemView';
 import Login from './pages/Login';
+import ItemViewMen from './pages/ItemViewMen';
+import ItemViewKid from './pages/ItemViewKid';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/Emrald/" element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/itemview' element={<ItemView/>}/>
+        <Route path='/itemviewmen' element={<ItemViewMen/>}/>
+        <Route path='/itemviewkid' element={<ItemViewKid/>}/>
       </Routes>
       
     </>

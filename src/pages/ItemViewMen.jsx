@@ -4,28 +4,23 @@ import { useLocation } from 'react-router-dom';
 import koko from '../assets/koko.png';
 import Navibar from '../components/Navibar';
 
-function ItemView() {
+function ItemViewMen() {
     const location = useLocation();
-    const queryParams = new URLSearchParams(location.search);
-    const src = queryParams.get('src');
-    const src1 = queryParams.get('src1');
-    const src2 = queryParams.get('src2');
-    const title = queryParams.get('title');
-    const price = queryParams.get('price');
-    const discount = queryParams.get('discount');
+    const { state } = location;
+    const { src, src1, title, price, discount, collectionType } = state || {};
 
     return (
         <>
             <Navibar />
             <div className='flex items-center justify-center pt-5 pb-5'>
-                <div className='bg-gray sm:flex  justify-center sm:w-[1128px] w-96 h-auto sm:p-10 p-5 gap-28 rounded-xl'>
+                <div className='bg-gray sm:flex  justify-center sm:w-[1128px] w-96 h-auto sm:p-10 p-5 gap-28 rounded-xl '>
                     <div className='bg-white sm:py-4 py-2 sm:px-8 px-4'>
                         <div className='w-92 h-100'>
                             <img src={src} alt="" />
                         </div>
                         <div className='flex flex-row gap-2 mt-2 justify-start'>
                             <img src={src1} alt="" className='w-24 h-28' />
-                            <img src={src2} alt="" className='w-24 h-28' />
+                            <img  alt="" className='w-24 h-28' />
                         </div>
                     </div>
                     <div>
@@ -35,7 +30,7 @@ function ItemView() {
                             <p className='sm:text-[27px] text-[20px]'>{price}</p>
                         </div>
                         <div className='flex flex-row items-center sm:mb-5 mb-2'>
-                            <p className='text-red sm:text-[15px] text-[10px]'>or 3 X {discount}</p>
+                            <p className='text-red sm:text-[15px] text-[10px]'>or 3 X{discount}</p>
                             <img src={koko} alt="" className='sm:w-20 w-10 sm:h-6 h-4' />
                         </div>
                         <div className='flex gap-2 items-center sm:mb-5 mb-2'>
@@ -71,4 +66,4 @@ function ItemView() {
     );
 }
 
-export default ItemView;
+export default ItemViewMen;

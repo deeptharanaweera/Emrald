@@ -1,16 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-import 'react-simple-carousel-image-slider/dist/index.css';
 import girl_crop1 from '../assets/girl_crop1.jpg';
 import girl_crop2 from '../assets/girl_crop2.jpg';
 import girl_crop3 from '../assets/girl_crop3.jpg';
 import girl_crop4 from '../assets/girl_crop4.jpg';
 import girl_tshirt1 from '../assets/girl_tshirt1.jpg';
+import girl_tshirt1_1 from '../assets/girl_tshirt1_1.jpg';
+import girl_tshirt1_2 from '../assets/girl_tshirt1_2.jpg';
 import girl_tshirt2 from '../assets/girl_tshirt2.jpg';
+import girl_tshirt2_1 from '../assets/girl_tshirt2_1.jpg';
+import girl_tshirt2_2 from '../assets/girl_tshirt2_2.jpg';
 import girl_tshirt3 from '../assets/girl_tshirt3.jpg';
+import girl_tshirt3_1 from '../assets/girl_tshirt3_1.jpg';
+import girl_tshirt3_2 from '../assets/girl_tshirt3_2.jpg';
 import girl_tshirt4 from '../assets/girl_tshirt4.jpg';
+import girl_tshirt4_1 from '../assets/girl_tshirt4_1.jpg';
+import girl_tshirt4_2 from '../assets/girl_tshirt4_2.jpg';
 import girl_tshirt5 from '../assets/girl_tshirt5.jpg';
+import girl_tshirt5_1 from '../assets/girl_tshirt5_1.jpg';
+import girl_tshirt5_2 from '../assets/girl_tshirt5_2.jpg';
+import { useSwipeable } from 'react-swipeable';
 
 function WomensCollection() {
     const [activeButton, setActiveButton] = useState('T-Shirt');
@@ -19,17 +29,17 @@ function WomensCollection() {
 
     const items = {
         'T-Shirt': [
-            { src: girl_tshirt1, title: 'Runn Active Wear Printed-White', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
-            { src: girl_tshirt2, title: 'Runn Active Wear Printed-Royal', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
-            { src: girl_tshirt3, title: 'Runn Active Wear Printed-Midnight', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
-            { src: girl_tshirt4, title: 'Runn Active Wear Printed-Navy', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
-            { src: girl_tshirt5, title: 'Runn Active Wear Printed-Plum', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
+            { src: girl_tshirt1,src1:girl_tshirt1_1, src2: girl_tshirt1_2 ,  title: 'Runn Active Wear Printed-White', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
+            { src: girl_tshirt2, src1:girl_tshirt2_1, src2: girl_tshirt2_2 , title: 'Runn Active Wear Printed-Royal', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
+            { src: girl_tshirt3, src1:girl_tshirt3_1, src2: girl_tshirt3_2 , title: 'Runn Active Wear Printed-Midnight', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
+            { src: girl_tshirt4, src1:girl_tshirt4_1, src2: girl_tshirt4_2 , title: 'Runn Active Wear Printed-Navy', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
+            { src: girl_tshirt5, src1:girl_tshirt5_1, src2: girl_tshirt5_2 , title: 'Runn Active Wear Printed-Plum', price: 'Rs 1,795.00', discount: 'Rs 598.33' },
         ],
         'Crops': [
-            { src: girl_crop1, title: 'Runn Active Wear -Turquoise', price: 'Rs 2,295.00', discount: 'Rs 765.00 ' },
+            { src: girl_crop1, title: 'Runn Active Wear -Turquoise', price: 'Rs 2,295.00', discount: 'Rs 765.00' },
             { src: girl_crop2, title: 'Runn Active Wear -Twilight', price: 'Rs 2,295.00', discount: 'Rs 765.00' },
-            { src: girl_crop3, title: 'Runn Active Wear -Tomato', price: 'Rs 2,295.00', discount: 'Rs 765.00 ' },
-            { src: girl_crop4, title: 'Runn Active Wear -Navy', price: 'Rs 2,295.00', discount: 'Rs 765.00 ' },
+            { src: girl_crop3, title: 'Runn Active Wear -Tomato', price: 'Rs 2,295.00', discount: 'Rs 765.00' },
+            { src: girl_crop4, title: 'Runn Active Wear -Navy', price: 'Rs 2,295.00', discount: 'Rs 765.00' },
         ],
         // Add other categories similarly
     };
@@ -48,6 +58,14 @@ function WomensCollection() {
 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleNextClick();
+        }, 3000); // Change slide every 3 seconds
+
+        return () => clearInterval(interval);
+    }, [activeButton]);
 
     const handleButtonClick = (item) => {
         setActiveButton(item);
@@ -71,6 +89,13 @@ function WomensCollection() {
 
     const visibleItems = getVisibleItems();
 
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft: () => handleNextClick(),
+        onSwipedRight: () => handlePrevClick(),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true,
+    });
+
     return (
         <div className='h-full md:mb-20 mb-10'>
             <div className='flex justify-center items-center md:gap-16 gap-3'>
@@ -80,11 +105,11 @@ function WomensCollection() {
             </div>
             <div className='pb-5'>
                 <div className="flex justify-center items-center">
-                    <ul className="flex flex-wrap md:text-3xl font-semibold gap-1">
+                    <ul className="flex flex-wrap md:text-3xl  font-semibold gap-1">
                         {['T-Shirt', 'Crops', 'Tank Tops', 'Leggings', 'Innerwear'].map((item) => (
                             <li key={item} className="relative">
                                 <button
-                                    className={`inline-block md:w-[175px] w-[80px] h-[45px] border- rounded-md ${activeButton === item ? 'bg-white' : 'bg-gray hover:bg-dark_gray'}`}
+                                    className={`inline-block md:w-[175px] w-[75px] h-[45px] border- rounded-md ${activeButton === item ? 'bg-white' : 'bg-gray hover:bg-dark_gray'}`}
                                     onClick={() => handleButtonClick(item)}
                                 >
                                     {item}
@@ -94,19 +119,26 @@ function WomensCollection() {
                                 )}
                             </li>
                         ))}
-                    </ul>
+                    </ul>   
                 </div>
             </div>
 
             <div className='flex justify-center items-center md:gap-8 gap-12'>
-                <button onClick={handlePrevClick} className='md:text-4xl text-md rounded-full p-2 bg-black text-white cursor-pointer transition duration-500 ease-in-out hover:scale-150 md:translate-x-10 translate-x-20 drop-shadow-lg'>
+                <button onClick={handlePrevClick} className='z-10 md:text-4xl text-md rounded-full p-2 bg-black text-white cursor-pointer transition duration-500 ease-in-out hover:scale-150 md:translate-x-10 translate-x-20 drop-shadow-lg'>
                     <FaAngleLeft />
                 </button>
-                <div className='flex justify-center items-center md:gap-8 gap-2'>
-                    {visibleItems.map(({ src, title, price, discount }, index) => (
-                        <Link to={'/itemview'} key={index} className='group bg-gray md:w-[400px] w-[200px] h-auto md:pt-5 pt-2 md:pl-5 pl-2 md:pr-5 pr-2 pb-2'>
-                            <div className='transition duration-500 ease-in-out hover:scale-110 bg-black'>
-                                <img src={src} alt={title} className='mb-3 ' />
+                <div className='flex justify-center items-center md:gap-8 gap-2'
+                {...swipeHandlers}>
+                    {visibleItems.map(({ src, src1, src2, title, price, discount }, index) => (
+                        <Link
+                            to={`/itemview?src=${encodeURIComponent(src)}&src1=${encodeURIComponent(src1)}&src2=${encodeURIComponent(src2)}&title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}&discount=${encodeURIComponent(discount)}`}
+                            key={index}
+                            className='group bg-gray md:w-[400px] w-[200px] h-auto md:pt-5 pt-2 md:pl-5 pl-2 md:pr-5 pr-2 pb-2'
+                        >
+                            <div className='relative group bg-no-repeat bg-cover overflow-hidden'>
+                                <div className='transition duration-500 ease-in-out hover:scale-110 bg-black'>
+                                    <img src={src} alt={title} className='mb-3' />
+                                </div>
                             </div>
                             <div>
                                 <p className='font-serif font-bold md:text-[20px] text-[10px]'>{title}</p>
@@ -116,7 +148,7 @@ function WomensCollection() {
                         </Link>
                     ))}
                 </div>
-                <button onClick={handleNextClick} className='md:text-4xl text-md rounded-full p-2 bg-black text-white cursor-pointer transition duration-500 ease-in-out hover:scale-150 md:-translate-x-10 -translate-x-20 drop-shadow-lg'>
+                <button onClick={handleNextClick} className='z-10 md:text-4xl text-md rounded-full p-2 bg-black text-white cursor-pointer transition duration-500 ease-in-out hover:scale-150 md:-translate-x-10 -translate-x-20 drop-shadow-lg'>
                     <FaAngleRight />
                 </button>
             </div>

@@ -59,10 +59,10 @@ function Home() {
   return (
     <div className='w-full h-auto'>
       <Navibar/>
-      <div className="group max-w-[1920px] h-[700px] w-full m-auto sm:py-12 sm:pt-0 sm:pb-0 relative ">
+      <div className="group sm:max-w-[1920px] max-w-[1000px] sm:h-[700px] h-[250px] w-full m-auto sm:py-12 sm:pt-0 sm:pb-0 relative">
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-          className="w-full h-full bg-center transition duration-500 brightness-75 group-hover:brightness-100 "
+          className="sm:w-full h-full bg-center transition duration-500 brightness-75 group-hover:brightness-100 "
         >
           {currentIndex === 1 && (
             <div className="relative w-full h-full">
