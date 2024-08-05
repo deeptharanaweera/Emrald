@@ -136,7 +136,7 @@ function MensCollection() {
                         <div
                             key={index}
                             className='group bg-gray md:w-[400px] w-[200px] h-auto md:pt-5 pt-2 md:pl-5 pl-2 md:pr-5 pr-2 pb-2'
-                            onClick={() => navigate('/emrald/itemviewmen', { state: { src, src1, title, price, discount } })}
+                            onClick={() => navigate('/Emrald/itemviewmen', { state: { src, src1, title, price, discount } })}
                             style={{ cursor: 'pointer' }} // Add cursor pointer to indicate clickable items
                         >
                             <div className='relative group bg-no-repeat bg-cover overflow-hidden'>

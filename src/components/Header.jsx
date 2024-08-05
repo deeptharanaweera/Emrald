@@ -8,7 +8,7 @@ function Header() {
     return (
         <header className='shadow-md w-full h-auto md:h-24 bg-gray flex flex-col md:flex-row justify-between items-center px-4 md:px-8'>
             <div className='flex flex-row md:flex-row w-full md:w-auto items-center justify-center gap-20 py-2 md:py-0'>
-                <Link to={"/emrald"} className='mb-2 md:mb-0'>
+                <Link to={"/Emrald/"} className='mb-2 md:mb-0'>
                     <div className='w-[118px] h-[55px] '>
                         <img src={logo} alt="Logo" className='h-full' />
                     </div>
@@ -17,7 +17,7 @@ function Header() {
                     <SlUser className='text-3xl' />
                     <div className='flex flex-col items-center '>
                         <p className='font-thin'>Hello,</p>
-                        <Link to={"/login"} className='font-semibold'>Sign in</Link>
+                        <Link to={"/Emrald/login"} className='font-semibold'>Sign in</Link>
                     </div>
                     <div className='relative'>
                         <SlHandbag className='text-3xl'/>
@@ -38,7 +38,7 @@ function Header() {
                     <SlUser className='text-3xl' />
                     <div className='flex flex-col'>
                         <p className='font-thin'>Hello,</p>
-                        <Link to={"/emrald/login"} className='font-semibold'>Sign in</Link>
+                        <Link to={"/Emrald/login"} className='font-semibold'>Sign in</Link>
                     </div>
                 </div>
                 <div className='relative flex items-center'>
