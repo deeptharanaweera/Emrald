@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'react-simple-carousel-image-slider/dist/index.css';
 import { useSwipeable } from 'react-swipeable';
+import men_shirt1 from '../assets/men_shirt1.jpg';
+import men_shirt1_1 from '../assets/men_shirt1_1.jpg';
+import men_shirt2 from '../assets/men_shirt2.jpg';
+import men_shirt2_1 from '../assets/men_shirt2_1.jpg';
+import men_shirt3 from '../assets/men_shirt3.jpg';
+import men_shirt3_1 from '../assets/men_shirt3_1.jpg';
+import men_shirt4 from '../assets/men_shirt4.jpg';
+import men_shirt4_1 from '../assets/men_shirt4_1.jpg';
 import men_tshirt1 from '../assets/men_tshirt1.jpg';
 import men_tshirt1_1 from '../assets/men_tshirt1_1.jpg';
 import men_tshirt2 from '../assets/men_tshirt2.jpg';
@@ -15,10 +23,6 @@ import men_tshirt5 from '../assets/men_tshirt5.jpg';
 import men_tshirt5_1 from '../assets/men_tshirt5_1.jpg';
 import men_tshirt6 from '../assets/men_tshirt6.jpg';
 import men_tshirt6_1 from '../assets/men_tshirt6_1.jpg';
-import shirt1 from '../assets/shirt1.jpg';
-import shirt2 from '../assets/shirt2.jpg';
-import shirt3 from '../assets/shirt3.jpg';
-import shirt4 from '../assets/shirt4.jpg';
 
 function MensCollection() {
     const [activeButton, setActiveButton] = useState('T-Shirt');
@@ -37,10 +41,13 @@ function MensCollection() {
             { src: men_tshirt6, src1: men_tshirt6_1, title: 'Lion Pride Polo - Brown Port', price: 'Rs 3,695.00', discount: 'Rs 1,231.66' },
         ],
         'Shirt': [
-            { src: shirt1, title: 'Emerald Active Printed Leisure Fit-Blue ', price: 'Rs 3,795.00', discount: 'Rs 1,265.00 ' },
-            { src: shirt2, title: 'Emerald Active Checks Slim Fit-Brown Tannin', price: 'Rs 3,995.00', discount: 'Rs 1,331.66' },
-            { src: shirt3, title: 'Emerald Active Printed Leisure Fit-Blue', price: 'Rs 3,795.00', discount: 'Rs 1,265.00 ' },
-            { src: shirt4, title: 'Emerald Corporate Oxford Slim Fit-Powder', price: 'Rs 3,795.00', discount: 'Rs 1,265.00 ' },
+            { src: men_shirt1, src1: men_shirt1_1, title: 'Emerald Active Printed Leisure Fit-Blue ', price: 'Rs 3,795.00', discount: 'Rs 1,265.00 ' },
+            { src: men_shirt2, src1: men_shirt2_1, title: 'Emerald Active Checks Slim Fit-Brown Tannin', price: 'Rs 3,995.00', discount: 'Rs 1,331.66' },
+            { src: men_shirt3, src1: men_shirt3_1, title: 'Emerald Active Printed Leisure Fit-Blue', price: 'Rs 3,795.00', discount: 'Rs 1,265.00 ' },
+            { src: men_shirt4, src1: men_shirt4_1, title: 'Emerald Corporate Oxford Slim Fit-Powder', price: 'Rs 3,795.00', discount: 'Rs 1,265.00 ' },
+        ],
+        'Shorts': [
+
         ],
     };
 
@@ -62,7 +69,7 @@ function MensCollection() {
     useEffect(() => {
         const interval = setInterval(() => {
             handleNextClick();
-        }, 3000); // Change slide every 3 seconds
+        }, 6000); // Change slide every 3 seconds
 
         return () => clearInterval(interval);
     }, [activeButton]);
@@ -100,7 +107,7 @@ function MensCollection() {
         <div className='h-full md:mb-20 mb-10'>
             <div className='flex justify-center items-center md:gap-16 gap-3'>
                 <hr className="md:w-[450px] w-[130px] h-1 bg-dark_gray border-0 rounded md:" />
-                <p className='md:text-6xl font-bold mb-3 text-light_black'>Men's Collection</p>
+                <Link to='/Emrald/mens' className='md:text-6xl font-bold mb-3 text-light_black'>Men's Collection</Link>
                 <hr className="md:w-[390px] w-[130px] h-1 bg-dark_gray border-0 rounded md:" />
             </div>
             <div className='pb-5'>

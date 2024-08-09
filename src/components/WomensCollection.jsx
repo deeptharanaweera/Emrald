@@ -100,7 +100,7 @@ function WomensCollection() {
         <div className='h-full md:mb-20 mb-10'>
             <div className='flex justify-center items-center md:gap-16 gap-3'>
                 <hr className="md:w-[450px] w-[120px] h-1 bg-dark_gray border-0 rounded md:" />
-                <p className='md:text-6xl font-bold mb-3 text-light_black'>Women's Collection</p>
+                <Link to="/Emrald/womens" className='md:text-6xl font-bold mb-3 text-light_black'>Women's Collection</Link>
                 <hr className="md:w-[390px] w-[120px] h-1 bg-dark_gray border-0 rounded md:" />
             </div>
             <div className='pb-5'>

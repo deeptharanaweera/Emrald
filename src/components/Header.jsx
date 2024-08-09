@@ -8,8 +8,8 @@ function Header() {
     return (
         <header className='shadow-md w-full h-auto md:h-24 bg-gray flex flex-col md:flex-row justify-between items-center px-4 md:px-8'>
             <div className='flex flex-row md:flex-row w-full md:w-auto items-center justify-center gap-20 py-2 md:py-0'>
-                <Link to={"/Emrald/"} className='mb-2 md:mb-0'>
-                    <div className='w-[118px] h-[55px] '>
+                <Link to={"/Emrald/"} className='sm:mb-2 '>
+                    <div className='sm:w-[118px] w-[60px] sm:h-[55px] h-[35px]'>
                         <img src={logo} alt="Logo" className='h-full' />
                     </div>
                 </Link>

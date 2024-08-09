@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'react-simple-carousel-image-slider/dist/index.css';
 import { useSwipeable } from 'react-swipeable';
 import kids_shirt1 from '../assets/kids_shirt1.jpg';
@@ -90,7 +90,7 @@ function KidsCollection() {
         <div className='h-full md:mb-20 mb-10'>
             <div className='flex justify-center items-center md:gap-16 gap-3'>
                 <hr className="md:w-[450px] w-[130px] h-1 bg-dark_gray border-0 rounded" />
-                <p className='md:text-6xl font-bold mb-3 text-light_black'>Kid's Collection</p>
+                <Link to='/Emrald/kids' className='md:text-6xl font-bold mb-3 text-light_black'>Kid's Collection</Link>
                 <hr className="md:w-[390px] w-[130px] h-1 bg-dark_gray border-0 rounded" />
             </div>
             <div className='pb-5'>
