@@ -73,7 +73,7 @@ function Login() {
             <img src={login_background} alt="" className='w-full h-full rounded-xl scale-y-110 rounded-l-[145px]' />
             <div>
             <button onClick={() => toggle(false)} className="rounded-full border  left-1 transform translate-x-[10%] -translate-y-[400%] border-white text-white text-[18px] bg-dark_blue font-bold  uppercase  w-[154px] h-[62px] transition-transform duration-80 focus:outline-none active:scale-95 bg-transparent ">Create account</button>
-              <h1 className='absolute top-[75%] left-1 transform translate-x-5 -translate-y-1/2 text-5xl text-white font-bold font-serif'>Sri Lanka's No.1 <br />Menswear Brand</h1>
+              <h1 className='absolute top-[75%] left-1 transform translate-x-5 -translate-y-1/2 text-5xl text-white font-bold font-serif'>Sri Lankan No.1 <br />Menswear Brand</h1>
             </div>
           </div>
               </div>
